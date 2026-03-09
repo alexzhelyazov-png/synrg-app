@@ -860,7 +860,7 @@ function App() {
 
       /* ── MOBILE HEADER ── */
       , isMobile&&(
-        React.createElement('div', { style: {flexShrink:0,background:C.sidebar,borderBottom:`1px solid ${C.border}`,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"12px 16px",boxSizing:"border-box",height:"56px"},}
+        React.createElement('div', { style: {flexShrink:0,background:C.sidebar,borderBottom:`1px solid ${C.border}`,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"12px 16px",paddingTop:"calc(20px + env(safe-area-inset-top))",boxSizing:"border-box",minHeight:"64px"},}
           , React.createElement('div', { style: {display:"flex",alignItems:"center",gap:"8px"},}
             , React.createElement('div', { style: {width:"28px",height:"28px",borderRadius:"8px",background:auth.role==="coach"?C.accentSoft:C.purpleSoft,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"14px"},}
               , auth.role==="coach"?"🏋":"🏃"
